@@ -17,7 +17,7 @@ Inference: we use the trained model with binary weights and binary activations i
 | ------------- | ----- | ------------- | ------------- |
 |   18-layer    | Top-1 |     56.4%     |     51.2%     |
 |               | Top-5 |     79.5%     |     73.4%     |
-|   34-layer    | Top-1 |     62.2%     |     79.5%     |
+|   34-layer    | Top-1 |     62.2%     |               |
 |               | Top-5 |     83.9%     |               |
 
 # Using the code
