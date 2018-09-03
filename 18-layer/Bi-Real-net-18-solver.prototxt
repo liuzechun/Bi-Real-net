@@ -1,0 +1,17 @@
+net: "train.prototxt"
+iter_size: 1
+test_iter: 1000
+test_interval: 200000
+test_initialization: false
+display: 30
+base_lr: 0.01
+lr_policy: "multistep"
+stepvalue: 100000
+stepvalue: 140000
+gamma: 0.1
+max_iter: 180000
+momentum: 0.9
+weight_decay: 0
+snapshot: 10000
+snapshot_prefix: "snapshots/train"
+solver_mode: GPU
