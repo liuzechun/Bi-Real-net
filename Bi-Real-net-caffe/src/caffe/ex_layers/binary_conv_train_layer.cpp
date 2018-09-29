@@ -531,8 +531,6 @@ void BinaryConvolutionTrainLayer<Dtype>::Backward_cpu(const vector<Blob<Dtype>*>
       const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom) {
   const Dtype* weight = this->blobs_[0]->cpu_data();
   Dtype* weight_diff = this->blobs_[0]->mutable_cpu_diff();
-  ModifyGradientsCPUTo(this->blobs_[0], this->blobs_[0], Wdiff_modified);
-  copyCPUdiffTo(Wdiff_modified, this->blobs_[0]);
   for (int i = 0; i < top.size(); ++i) {
     const Dtype* top_diff = top[i]->cpu_diff();
     const Dtype* bottom_data = bottom[i]->cpu_data();
@@ -579,28 +577,6 @@ void BinaryConvolutionTrainLayer<Dtype>::binarizeCPUTo(const shared_ptr<Blob<Dty
     wb->mutable_cpu_data()[index] = A[num] * sign(weights->cpu_data()[index]);
   }
 }
-
-template <typename Dtype>
-void BinaryConvolutionTrainLayer<Dtype>::ModifyGradientsCPUTo(const shared_ptr<Blob<Dtype> > dw_b, const shared_ptr<Blob<Dtype> > w_r, const shared_ptr<Blob<Dtype> > dw_r) {
-  #define clip(x) ((x)>=-1&&(x)<=1?x:0)
-  const int div = w_r->count() / w_r->num();
-  std::vector<Dtype> A( w_r->num(), 0);
-  for (int num = 0; num < w_r->num(); num++) {
-    for (int _c = 0; _c < w_r->channels(); _c++)
-    for (int _h = 0; _h < w_r->height(); _h++)
-    for (int _w = 0; _w < w_r->width(); _w++)
-      A[num] += std::abs(w_r->data_at(num, _c, _h, _w)) / Dtype(div);
-  }
-  for (int index = 0; index < dw_b->count(); index++) {
-      const int num = index / div;
-      if ( (w_r->mutable_cpu_data()[index] > Dtype(-1)) && (w_r->mutable_cpu_data()[index] <= Dtype(1)) ){
-            dw_r->mutable_cpu_diff()[index] = A[num] * dw_b->mutable_cpu_diff()[index];
-      }
-      else{
-            dw_r->mutable_cpu_diff()[index] = 0;
-      }
-  }
-}  
 
 // For components function
 template <typename Dtype>
