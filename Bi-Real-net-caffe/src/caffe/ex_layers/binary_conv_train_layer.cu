@@ -31,15 +31,6 @@ void BinaryConvolutionTrainLayer<Dtype>::binarizeGPUTo(const shared_ptr<Blob<Dty
 }
 
 template <typename Dtype>
-void BinaryConvolutionTrainLayer<Dtype>::ModifyGradientsGPUTo(const shared_ptr<Blob<Dtype> > dw_b, const shared_ptr<Blob<Dtype> > w_r, const shared_ptr<Blob<Dtype> > dw_r) {
-  const int count = dw_b->num();
-  const int div = dw_b->count() / count;
-  ModifyGradients<Dtype><<<CAFFE_GET_BLOCKS(count), CAFFE_CUDA_NUM_THREADS>>>(
-    count, div, dw_b->mutable_gpu_diff(), w_r->mutable_gpu_data(), dw_r->mutable_gpu_diff() );
-}
-
-
-template <typename Dtype>
 void BinaryConvolutionTrainLayer<Dtype>::Forward_gpu(const vector<Blob<Dtype>*>& bottom,
       const vector<Blob<Dtype>*>& top) {
   binarizeGPUTo(this->blobs_[0], W_b);
@@ -157,8 +148,6 @@ void BinaryConvolutionTrainLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>
 
 template void BinaryConvolutionTrainLayer<float>::binarizeGPUTo(const shared_ptr<Blob<float> > weights, const shared_ptr<Blob<float> > wb);
 template void BinaryConvolutionTrainLayer<double>::binarizeGPUTo(const shared_ptr<Blob<double> > weights, const shared_ptr<Blob<double> > wb);
-template void BinaryConvolutionTrainLayer<float>::ModifyGradientsGPUTo(const shared_ptr<Blob<float> > weights, const shared_ptr<Blob<float> > w_r, const shared_ptr<Blob<float> > wb);
-template void BinaryConvolutionTrainLayer<double>::ModifyGradientsGPUTo(const shared_ptr<Blob<double> > weights, const shared_ptr<Blob<double> > w_r, const shared_ptr<Blob<double> > wb);
 
 INSTANTIATE_LAYER_GPU_FUNCS(BinaryConvolutionTrainLayer);
 
