@@ -39,7 +39,6 @@ class BinaryConvolutionTrainLayer : public Layer<Dtype> {
   shared_ptr<Blob<Dtype> >  Wdiff_modified;
   shared_ptr<Blob<Dtype> >  Wdiff_buffer;
   virtual void binarizeCPUTo(const shared_ptr<Blob<Dtype> > weights, const shared_ptr<Blob<Dtype> > wb);
-  virtual void ModifyGradientsCPUTo(const shared_ptr<Blob<Dtype> > dw_b, const shared_ptr<Blob<Dtype> > w_r, const shared_ptr<Blob<Dtype> > dw_r);
   virtual inline void copyCPUdataTo(const shared_ptr<Blob<Dtype> > ori, const shared_ptr<Blob<Dtype> > buf) {
     CHECK_EQ(ori->count(), buf->count());
     caffe_copy(ori->count(), ori->cpu_data(), buf->mutable_cpu_data());
@@ -59,7 +58,6 @@ class BinaryConvolutionTrainLayer : public Layer<Dtype> {
 //same as conv_layer
 #ifdef USE_CUDNN
   virtual void binarizeGPUTo(const shared_ptr<Blob<Dtype> > weights, const shared_ptr<Blob<Dtype> > wb);
-  virtual void ModifyGradientsGPUTo(const shared_ptr<Blob<Dtype> > dw_b, const shared_ptr<Blob<Dtype> > w_r, const shared_ptr<Blob<Dtype> > dw_r);
   virtual inline void copyGPUdataTo(const shared_ptr<Blob<Dtype> > ori, const shared_ptr<Blob<Dtype> > buf) {
     CHECK_EQ(ori->count(), buf->count());
     cudaMemcpy(buf->mutable_gpu_data(), ori->gpu_data(), sizeof(Dtype)*ori->count(), cudaMemcpyDefault);
