@@ -23,25 +23,6 @@ __global__ void BinaryGPU_binarize(const int n, const int num, const Dtype* in, 
 }
 
 template <typename Dtype>
-__global__ void ModifyGradients(const int n, const int num, const Dtype* dw_b, const Dtype* w_r, Dtype* dw_r) {
-  CUDA_KERNEL_LOOP(index, n) {
-    Dtype sum = 0;
-    for (int coor = 0; coor < num; coor++) {
-      sum += std::abs(w_r[index * num + coor]) / Dtype(num);
-    }
-    for (int coor = 0; coor < num; coor++) {
-      	if ( (w_r[index * num + coor] > Dtype(-1)) && (w_r[index * num + coor] <= Dtype(1)) ){
-            dw_r[index * num + coor] = sum * dw_b[index * num + coor];   
-        }
-        else {
-            dw_r[index * num + coor] = 0 ;
-        }
-    }
-  }  
-}
-
-
-template <typename Dtype>
 void BinaryConvolutionTrainLayer<Dtype>::binarizeGPUTo(const shared_ptr<Blob<Dtype> > weights, const shared_ptr<Blob<Dtype> > wb) {
   const int count = weights->num();
   const int div = weights->count() / count;
@@ -111,8 +92,6 @@ void BinaryConvolutionTrainLayer<Dtype>::Backward_gpu(const vector<Blob<Dtype>*>
       const vector<bool>& propagate_down, const vector<Blob<Dtype>*>& bottom) {
   const Dtype* weight = NULL;
   Dtype* weight_diff = NULL;
-  ModifyGradientsGPUTo(this->blobs_[0], this->blobs_[0], Wdiff_modified);
-  copyGPUdiffTo(Wdiff_modified, this->blobs_[0]);  
   if (this->param_propagate_down_[0]) {
     weight = this->blobs_[0]->gpu_data();
     weight_diff = this->blobs_[0]->mutable_gpu_diff();
