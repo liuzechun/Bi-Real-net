@@ -21,4 +21,4 @@ Inference: we use the trained model with binary weights and binary activations i
 |               | Top-5 |     83.9%     |               |
 
 # Using the code
-This is a caffe implementation. We added the binary convolution layer and leaky-clip layer. The binary convolution layer is modified from https://github.com/loswensiana/BWN-XNOR-caffe, in which we modified the gradient computation method. To use the code, please put the ex_layers folder under the src and include folder respectively. Also you need to replace the original thereshold layer with our threshold layer for we modified its backward computation, too.
+This is a caffe implementation. We added the binary convolution layer and leaky-clip layer. The binary convolution layer is modified from https://github.com/loswensiana/BWN-XNOR-caffe, in which we modified the gradient computation method. To use the code, please put the ex_layers folder under the src and include folder respectively. Also you need to replace the original thereshold layer with our threshold layer because we modified its backward computation.
