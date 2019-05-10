@@ -1787,7 +1787,7 @@ layer {
     bottom: "res4f_thre"
     top: "res5a_branch2a"
     name: "res5a_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 512
