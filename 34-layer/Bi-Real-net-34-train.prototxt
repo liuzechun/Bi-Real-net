@@ -106,7 +106,7 @@ layer {
     bottom: "thre1"
     top: "res2a_branch2a"
     name: "res2a_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
     convolution_param {
         num_output: 64
         kernel_size: 3
@@ -165,7 +165,7 @@ layer {
     bottom: "res2a_branch2a_thre"
     top: "res2a_branch2b"
     name: "res2a_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 64
@@ -226,7 +226,7 @@ layer {
     bottom: "res2a_branch2b_thre"
     top: "res2b_branch2a"
     name: "res2b_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 64
@@ -287,7 +287,7 @@ layer {
     bottom: "res2b_branch2a_thre"
     top: "res2b_branch2b"
     name: "res2b_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 64
@@ -348,7 +348,7 @@ layer {
     bottom: "res2b_branch2b_thre"
     top: "res2c_branch2a"
     name: "res2c_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 64
@@ -409,7 +409,7 @@ layer {
     bottom: "res2c_branch2a_thre"
     top: "res2c_branch2b"
     name: "res2c_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 64
@@ -503,7 +503,7 @@ layer {
     bottom: "res2c_thre"
     top: "res3a_branch2a"
     name: "res3a_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 128
@@ -564,7 +564,7 @@ layer {
     bottom: "res3a_branch2a_thre"
     top: "res3a_branch2b"
     name: "res3a_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 128
@@ -625,7 +625,7 @@ layer {
     bottom: "res3a_thre"
     top: "res3b_branch2a"
     name: "res3b_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 128
@@ -685,7 +685,7 @@ layer {
     bottom: "res3b_branch2a_thre"
     top: "res3b_branch2b"
     name: "res3b_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 128
@@ -746,7 +746,7 @@ layer {
     bottom: "res3b_branch2b_thre"
     top: "res3c_branch2a"
     name: "res3c_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 128
@@ -807,7 +807,7 @@ layer {
     bottom: "res3c_branch2a_thre"
     top: "res3c_branch2b"
     name: "res3c_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 128
@@ -868,7 +868,7 @@ layer {
     bottom: "res3c_branch2b_thre"
     top: "res3d_branch2a"
     name: "res3d_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 128
@@ -929,7 +929,7 @@ layer {
     bottom: "res3d_branch2a_thre"
     top: "res3d_branch2b"
     name: "res3d_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 128
@@ -1023,7 +1023,7 @@ layer {
     bottom: "res3d_thre"
     top: "res4a_branch2a"
     name: "res4a_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1084,7 +1084,7 @@ layer {
     bottom: "res4a_branch2a_thre"
     top: "res4a_branch2b"
     name: "res4a_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1145,7 +1145,7 @@ layer {
     bottom: "res4a_thre"
     top: "res4b_branch2a"
     name: "res4b_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1205,7 +1205,7 @@ layer {
     bottom: "res4b_branch2a_thre"
     top: "res4b_branch2b"
     name: "res4b_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1266,7 +1266,7 @@ layer {
     bottom: "res4b_branch2b_thre"
     top: "res4c_branch2a"
     name: "res4c_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1327,7 +1327,7 @@ layer {
     bottom: "res4c_branch2a_thre"
     top: "res4c_branch2b"
     name: "res4c_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1388,7 +1388,7 @@ layer {
     bottom: "res4c_branch2b_thre"
     top: "res4d_branch2a"
     name: "res4d_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1449,7 +1449,7 @@ layer {
     bottom: "res4d_branch2a_thre"
     top: "res4d_branch2b"
     name: "res4d_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1510,7 +1510,7 @@ layer {
     bottom: "res4d_branch2b_thre"
     top: "res4e_branch2a"
     name: "res4e_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1571,7 +1571,7 @@ layer {
     bottom: "res4e_branch2a_thre"
     top: "res4e_branch2b"
     name: "res4e_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1632,7 +1632,7 @@ layer {
     bottom: "res4e_branch2b_thre"
     top: "res4f_branch2a"
     name: "res4f_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1693,7 +1693,7 @@ layer {
     bottom: "res4f_branch2a_thre"
     top: "res4f_branch2b"
     name: "res4f_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 256
@@ -1848,7 +1848,7 @@ layer {
     bottom: "res5a_branch2a_thre"
     top: "res5a_branch2b"
     name: "res5a_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 512
@@ -1909,7 +1909,7 @@ layer {
     bottom: "res5a_thre"
     top: "res5b_branch2a"
     name: "res5b_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 512
@@ -1969,7 +1969,7 @@ layer {
     bottom: "res5b_branch2a_thre"
     top: "res5b_branch2b"
     name: "res5b_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 512
@@ -2030,7 +2030,7 @@ layer {
     bottom: "res5b_branch2b_thre"
     top: "res5c_branch2a"
     name: "res5c_branch2a"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 512
@@ -2091,7 +2091,7 @@ layer {
     bottom: "res5c_branch2a_thre"
     top: "res5c_branch2b"
     name: "res5c_branch2b"
-    type: "BinaryConvolution"
+    type: "BinaryConvolutionTrain"
 
     convolution_param {
         num_output: 512
