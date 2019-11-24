@@ -30,13 +30,13 @@ and
 And we retained the same accuracy as that reported in the Bi-Real Net paper. 
 
 # Pytorch Implementation 
-To make Bi-Real Net easier to implement. We recently discovered that we can train it from scratch with Adam solver. The start learning rate is 0.001 and linearly decay to 0 after 256 epoches. the batchsize is set to 512. If you want to decrease or increase the batchsize, remember to multiply the learning rate with the same ratio. Other training settings are the same as ShuffleNet training. This implementation is different from that reported in the paper. The difference are three folds:
+To make Bi-Real Net easier to implement. We recently discovered that we can train it from scratch with Adam solver. The start learning rate is 0.001 and linearly decay to 0 after 256 epoches. the batchsize is set to 512. If you want to decrease or increase the batchsize, remember to multiply the learning rate with the same ratio. This implementation is different from that reported in the paper. The difference are three folds:
 
 |               |  Caffe implementation in our original paper   | Pytorch implementation   |   
 | ------------- | ----- | ------------- | 
-|   Training technique    | Step-by-step finetuning |     Train from scratch     |  
+|   Training Technique    | Step-by-step finetune |     Train from scratch     |  
 |   Solver     | SGD with momentum |     Adam     |  
-|   Data augmentation   | Random crop 224 from 256 | Random rescale with rescale ratio \[0.08-1\] then random crop 224 from 256 |  
+|   Data Augmentation   | Random crop 224 from 256 | Random rescale with rescale ratio \[0.08-1\] then random crop 224 from 256 |  
 
 1. Requirements:
     * python3, pytorch 1.3.0, torchvision 0.4.1
