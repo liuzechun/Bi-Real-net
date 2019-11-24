@@ -28,8 +28,6 @@ and
       year={2018}
     }
 
-And we retained the same accuracy as that reported in the Bi-Real Net paper. 
-
 # Pytorch Implementation 
 To make Bi-Real Net easier to implement. We recently discovered that we can train it from scratch with Adam solver. The start learning rate is 0.001 and linearly decay to 0 after 256 epoches. the batchsize is set to 512. If you want to decrease or increase the batchsize, remember to multiply the learning rate with the same ratio. This implementation is different from that reported in the paper. The difference are three folds:
 
