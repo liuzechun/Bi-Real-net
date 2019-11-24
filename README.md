@@ -4,7 +4,7 @@ This is the implementation of our paper "Bi-Real Net: Enhancing the Performance 
 
 
 # News (updated in November 23rd 2019)
-We finished the pytorch implementation of training Bi-Real Net from scratch, which is super easy run. We retrain the same accuracy as reported in the paper.
+We finished the pytorch implementation of training Bi-Real Net from scratch, which is super easy to run. We retrain the same accuracy as reported in the paper.
 Clone and have a try with our new pytorch implementation! 
 
 # Citation
@@ -29,7 +29,9 @@ and
     }
 
 # Pytorch Implementation 
-To make Bi-Real Net easier to implement. We recently discovered that we can train it from scratch with Adam solver. The start learning rate is 0.001 and linearly decay to 0 after 256 epoches. the batchsize is set to 512. If you want to decrease or increase the batchsize, remember to multiply the learning rate with the same ratio. This implementation is different from that reported in the paper. The difference are three folds:
+
+To make Bi-Real Net easier to implement. We recently discovered that we can train it from scratch with Adam solver. The start learning rate is 0.001 and linearly decay to 0 after 256 epoches. the batchsize is set to 512. If you want to decrease or increase the batchsize, remember to multiply the learning rate with the same ratio. This implementation is different from that reported in the paper. The difference are mainly three folds:
+
 
 |               |  Caffe implementation in our original paper   | Pytorch implementation   |   
 | ------------- | ----- | ------------- | 
@@ -37,11 +39,12 @@ To make Bi-Real Net easier to implement. We recently discovered that we can trai
 |   Solver     | SGD with momentum |     Adam     |  
 |   Data Augmentation   | Random crop 224 from 256 | Random rescale with rescale ratio \[0.08-1\] then random crop 224 from 256 |  
 
-1. Requirements:
+Requirements:
     * python3, pytorch 1.3.0, torchvision 0.4.1
 
 
 # Caffe Implementation
+
 This model was trained on ImageNet dataset with 1000 classes and 1.2 million training images and 50k validation images. For each image in the ImageNet dataset, the smaller dimension of the image is rescaled to 256 while keeping the aspect ratio intact. For
 training, a random crop of size 224 × 224 is selected. Note that, in contrast to XNOR-Net and the full-precision ResNet, we do not use the operation of random resize, which might improve the performance further. For inference, we employ the 224 × 224 center crop from images.
 
