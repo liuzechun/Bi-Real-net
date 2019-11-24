@@ -3,8 +3,8 @@ This is the implementation of our paper "Bi-Real Net: Enhancing the Performance 
 <img width=60% src="https://github.com/liuzechun0216/images/blob/master/birealnet_figure.png"/>
 
 
-# News (updated in November 23rd)
-We finished the pytorch implementation of training Bi-Real Net from scratch, which makes it super easy to train Bi-Real Net. We retrain the same accuracy as reported in the paper.
+# News (updated in November 23rd 2019)
+We finished the pytorch implementation of training Bi-Real Net from scratch, which is super easy run. We retrain the same accuracy as reported in the paper.
 Clone and have a try with our new pytorch implementation! 
 
 # Citation
