@@ -11,21 +11,22 @@ Clone and have a try with our new pytorch implementation!
 
 If you use the code in your research, please cite:
 
-@inproceedings{liu2018bi,
-  title={Bi-real net: Enhancing the performance of 1-bit cnns with improved representational capability and advanced training algorithm},
-  author={Liu, Zechun and Wu, Baoyuan and Luo, Wenhan and Yang, Xin and Liu, Wei and Cheng, Kwang-Ting},
-  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
-  pages={722--737},
-  year={2018}
-}
+    @inproceedings{liu2018bi,
+      title={Bi-real net: Enhancing the performance of 1-bit cnns with improved representational capability and advanced training algorithm},
+      author={Liu, Zechun and Wu, Baoyuan and Luo, Wenhan and Yang, Xin and Liu, Wei and Cheng, Kwang-Ting},
+      booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+      pages={722--737},
+      year={2018}
+    }
+
 and
 
-@article{liu2018bi,
-  title={Bi-real net: Binarizing deep network towards real-network performance},
-  author={Liu, Zechun and Luo, Wenhan and Wu, Baoyuan and Yang, Xin and Liu, Wei and Cheng, Kwang-Ting},
-  journal={arXiv preprint arXiv:1811.01335},
-  year={2018}
-}
+    @article{liu2018bi,
+      title={Bi-real net: Binarizing deep network towards real-network performance},
+      author={Liu, Zechun and Luo, Wenhan and Wu, Baoyuan and Yang, Xin and Liu, Wei and Cheng, Kwang-Ting},
+      journal={arXiv preprint arXiv:1811.01335},
+      year={2018}
+    }
 
 And we retained the same accuracy as that reported in the Bi-Real Net paper. 
 
