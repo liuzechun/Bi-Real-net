@@ -1,5 +1,7 @@
 # Bi-Real-net
-This is the implementation of our paper "Bi-Real Net: Enhancing the Performance of 1-bit CNNs With Improved Representational Capability and Advanced Training Algorithm" published in ECCV 2018 and "Bi-real net: Binarizing deep network towards real-network performance" published in IJCV. 
+This is the implementation of our paper "[Bi-Real Net: Enhancing the Performance of 1-bit CNNs With Improved Representational Capability and Advanced Training Algorithm](https://eccv2018.org/openaccess/content_ECCV_2018/papers/zechun_liu_Bi-Real_Net_Enhancing_ECCV_2018_paper.pdf)" published in ECCV 2018 and "[Bi-real net: Binarizing deep network towards real-network performance](https://arxiv.org/pdf/1811.01335.pdf)" published in IJCV. 
+
+We proposed to use a identity mapping to propagate the real-valued information before binarization. The proposed 1-layer-per-block structure with the shortcut bypassing every binary convolutional layers significantly outperforms the original 2-layer-per-block structure in ResNet when weights and activations are binarized. The detailed motivation and discussion can be found in our IJCV paper. Three other proposed training techniques can be found in the ECCV paper.
 <img width=60% src="https://github.com/liuzechun0216/images/blob/master/birealnet_figure.png"/>
 
 
