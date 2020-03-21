@@ -13,7 +13,7 @@ Clone and have a try with our new pytorch implementation!
 
 # Citation
 
-If you use the code in your research, please cite:
+If you find this repo useful for your research, please consider citing the paper:
 
     @inproceedings{liu2018bi,
       title={Bi-real net: Enhancing the performance of 1-bit cnns with improved representational capability and advanced training algorithm},
