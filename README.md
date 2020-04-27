@@ -25,11 +25,15 @@ If you find this repo useful for your research, please consider citing the paper
 
 and
 
-    @article{liu2018bi,
+    @article{liu2020bi,
       title={Bi-real net: Binarizing deep network towards real-network performance},
       author={Liu, Zechun and Luo, Wenhan and Wu, Baoyuan and Yang, Xin and Liu, Wei and Cheng, Kwang-Ting},
-      journal={arXiv preprint arXiv:1811.01335},
-      year={2018}
+      journal={International Journal of Computer Vision},
+      volume={128},
+      number={1},
+      pages={202--219},
+      year={2020},
+      publisher={Springer}
     }
 
 # Pytorch Implementation 
