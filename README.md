@@ -28,7 +28,7 @@ and
     @article{liu2020bi,
       title={Bi-real net: Binarizing deep network towards real-network performance},
       author={Liu, Zechun and Luo, Wenhan and Wu, Baoyuan and Yang, Xin and Liu, Wei and Cheng, Kwang-Ting},
-      journal={International Journal of Computer Vision},
+      journal={International Journal of Computer Vision (IJCV)},
       volume={128},
       number={1},
       pages={202--219},
