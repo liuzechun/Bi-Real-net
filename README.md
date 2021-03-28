@@ -13,7 +13,7 @@ We finished the pytorch implementation of training Bi-Real Net from scratch, whi
 Clone and have a try with our new pytorch implementation! 
 
 \[March 28th 2021\]
-Our newest paper "[ReActNet: Towards Precise Binary Neural Network with Generalized Activation Functions](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590137.pdf)" achieves 65.8% accuracy on Bi-Real Net-18 structure with simple ReAct functions. Check this paper if you are interested,
+Our newest paper "[ReActNet: Towards Precise Binary Neural Network with Generalized Activation Functions](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590137.pdf)" achieves 65.8% accuracy on Bi-Real Net-18 structure with simple ReAct functions. Check this paper if you are interested.
 
 # Reference
 
