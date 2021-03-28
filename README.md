@@ -7,11 +7,15 @@ We proposed to use a identity mapping to propagate the real-valued information b
 
 
 
-# News (updated in November 23rd 2019)
+# News 
+\[November 23rd 2019\] 
 We finished the pytorch implementation of training Bi-Real Net from scratch, which is super easy to run. We obtain the same accuracy as reported in the paper.
 Clone and have a try with our new pytorch implementation! 
 
-# Citation
+\[March 28th 2021\]
+Our newest paper "[ReActNet: Towards Precise Binary Neural Network with Generalized Activation Functions](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123590137.pdf)" achieves 65.8% accuracy on Bi-Real Net-18 structure with simple ReAct functions. Check this paper if you are interested,
+
+# Reference
 
 If you find this repo useful for your research, please consider citing the paper:
 
@@ -35,6 +39,7 @@ and
       year={2020},
       publisher={Springer}
     }
+
 
 # Pytorch Implementation 
 
